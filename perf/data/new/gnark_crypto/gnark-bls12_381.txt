@@ -1,0 +1,27 @@
+~/zkalc_gnark_HTC_IIS/backend/gnark/gnark-crypto/ecc ~/zkalc_gnark_HTC_IIS/backend/gnark
+~/zkalc_gnark_HTC_IIS/backend/gnark/gnark-crypto/ecc/bls12-381 ~/zkalc_gnark_HTC_IIS/backend/gnark/gnark-crypto/ecc ~/zkalc_gnark_HTC_IIS/backend/gnark
+~/zkalc_gnark_HTC_IIS/backend/gnark/gnark-crypto/ecc/bls12-381/fr ~/zkalc_gnark_HTC_IIS/backend/gnark/gnark-crypto/ecc/bls12-381 ~/zkalc_gnark_HTC_IIS/backend/gnark/gnark-crypto/ecc ~/zkalc_gnark_HTC_IIS/backend/gnark
+goos: linux
+goarch: amd64
+pkg: github.com/consensys/gnark-crypto/ecc/bls12-381/fr
+cpu: Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+BenchmarkElementAdd-2   	415331390	         3.029 ns/op
+PASS
+ok  	github.com/consensys/gnark-crypto/ecc/bls12-381/fr	1.563s
+~/zkalc_gnark_HTC_IIS/backend/gnark/gnark-crypto/ecc/bls12-381 ~/zkalc_gnark_HTC_IIS/backend/gnark/gnark-crypto/ecc ~/zkalc_gnark_HTC_IIS/backend/gnark
+goos: linux
+goarch: amd64
+pkg: github.com/consensys/gnark-crypto/ecc/bls12-381
+cpu: Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+BenchmarkG1JacIsInSubGroup-2   	   14509	     77834 ns/op
+PASS
+ok  	github.com/consensys/gnark-crypto/ecc/bls12-381	1.981s
+goos: linux
+goarch: amd64
+pkg: github.com/consensys/gnark-crypto/ecc/bls12-381
+cpu: Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+BenchmarkHashToG1-2   	    6694	    162887 ns/op
+PASS
+ok  	github.com/consensys/gnark-crypto/ecc/bls12-381	1.998s
+~/zkalc_gnark_HTC_IIS/backend/gnark/gnark-crypto/ecc ~/zkalc_gnark_HTC_IIS/backend/gnark
+~/zkalc_gnark_HTC_IIS/backend/gnark

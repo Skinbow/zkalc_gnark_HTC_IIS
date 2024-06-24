@@ -1,10 +1,10 @@
-OUTDIR=../perf/data/new/
+OUTDIR=../perf/data/new
 
 all: init blstrs arkworks curve25519-dalek pasta_curves zkcrypto gnark pairing_ce halo2_curves ffjavascript
 
 init:
-	cargo install cargo-criterion
-	cd ffjavascript; npm i
+	# cargo install cargo-criterion
+	# cd ffjavascript; npm i
 	mkdir -p $(OUTDIR)
 	mkdir -p $(OUTDIR)/{arkworks,blstrs,curve25519-dalek,pasta_curves,zkcrypto,pairing_ce,halo2_curves,gnark_crypto,ffjavascript}
 
@@ -45,9 +45,9 @@ gnark:
 	cd gnark; \
 		git clone https://github.com/ConsenSys/gnark-crypto.git || true; \
 		bash ./zkalc.sh gnark-crypto bls12-381 | tee ../$(OUTDIR)/gnark_crypto/gnark-bls12_381.txt; \
-		bash ./zkalc.sh gnark-crypto bls12-377 | tee ../$(OUTDIR)/gnark_crypto/gnark-bls12_377.txt; \
-		bash ./zkalc.sh gnark-crypto bn254     | tee ../$(OUTDIR)/gnark_crypto/gnark-bn254.txt; \
-		bash ./zkalc.sh gnark-crypto secp256k1 | tee ../$(OUTDIR)/gnark_crypto/gnark-secp256k1.txt
+		# bash ./zkalc.sh gnark-crypto bls12-377 | tee ../$(OUTDIR)/gnark_crypto/gnark-bls12_377.txt; \
+		# bash ./zkalc.sh gnark-crypto bn254     | tee ../$(OUTDIR)/gnark_crypto/gnark-bn254.txt; \
+		# bash ./zkalc.sh gnark-crypto secp256k1 | tee ../$(OUTDIR)/gnark_crypto/gnark-secp256k1.txt
 
 ffjavascript:
 	cd ffjavascript; node bench.js 2> ../$(OUTDIR)/ffjavascript/ffjavascript.json
