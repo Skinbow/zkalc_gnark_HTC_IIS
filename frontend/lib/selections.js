@@ -232,6 +232,38 @@ export const operations = {
       </>
     ),
   },
+  is_in_sub_G1: {
+    label: (
+        <>
+          Is in subgroup <InlineMath math="\mathbb{G}_1" />
+        </>
+      ),
+      description: (
+        <>
+          Elliptic curve <InlineMath math="\mathbb{G}_1" /> checking subgroup
+        </>
+      ),
+      tooltip_width: 500,
+      tooltip: (
+        <InlineMath math="\mathbb{G}_1^n \mapsto \mathbb{G}_1: (A_1, A_1, \dots, A_n) \mapsto \sum_i A_i" />
+      ),
+  },
+  hash_G1: {
+    label: (
+        <>
+          Hash to <InlineMath math="\mathbb{G}_1" />
+        </>
+      ),
+      description: (
+        <>
+          Elliptic curve <InlineMath math="\mathbb{G}_1" /> hashing
+        </>
+      ),
+      tooltip_width: 500,
+      tooltip: (
+        <InlineMath math="\mathbb{G}_1^n \mapsto \mathbb{G}_1: (A_1, A_1, \dots, A_n) \mapsto \sum_i A_i" />
+      ),
+  },
   add_G1: {
     label: (
       <>
