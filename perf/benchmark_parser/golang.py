@@ -68,6 +68,8 @@ probes = {
     r'E12Expt': lambda:  ("mul_Gt", 1),
     r'Pairing': lambda:  ("pairing", 1),
     r'MultiPair/(\d+)_pairs': lambda x: ("msm_Gt", int(x)),
+    r'HashToG1': lambda: ("hash_G1", 1),
+    r'G1JacIsInSubGroup': lambda: ("is_in_sub_G1", 1)
 }
 
 
