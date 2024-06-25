@@ -45,7 +45,7 @@ gnark:
 	cd gnark; \
 		git clone https://github.com/ConsenSys/gnark-crypto.git || true; \
 		bash ./zkalc.sh gnark-crypto bls12-381 | tee ../$(OUTDIR)/gnark_crypto/gnark-bls12_381.txt; \
-		# bash ./zkalc.sh gnark-crypto bls12-377 | tee ../$(OUTDIR)/gnark_crypto/gnark-bls12_377.txt; \
+		bash ./zkalc.sh gnark-crypto bls12-377 | tee ../$(OUTDIR)/gnark_crypto/gnark-bls12_377.txt; \
 		# bash ./zkalc.sh gnark-crypto bn254     | tee ../$(OUTDIR)/gnark_crypto/gnark-bn254.txt; \
 		# bash ./zkalc.sh gnark-crypto secp256k1 | tee ../$(OUTDIR)/gnark_crypto/gnark-secp256k1.txt
 
