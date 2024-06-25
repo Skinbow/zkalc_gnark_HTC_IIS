@@ -3,13 +3,11 @@ set -e
 zkalc_benchmarks () {
     pushd $1
 
-    pushd fr
-    go test -run none -bench BenchmarkElementAdd
-    popd
-
     go test -run none -bench BenchmarkG1JacIsInSubGroup
+    go test -run none -bench BenchmarkG2JacIsInSubGroup
     go test -run none -bench BenchmarkHashToG1
-
+    go test -run none -bench BenchmarkHashToG2
+    
     popd
 }
 
