@@ -69,7 +69,9 @@ probes = {
     r'Pairing': lambda:  ("pairing", 1),
     r'MultiPair/(\d+)_pairs': lambda x: ("msm_Gt", int(x)),
     r'HashToG1': lambda: ("hash_G1", 1),
-    r'G1JacIsInSubGroup': lambda: ("is_in_sub_G1", 1)
+    r'HashToG2': lambda: ("hash_G2", 1),
+    r'G1JacIsInSubGroup': lambda: ("is_in_sub_G1", 1),
+    r'G2JacIsInSubGroup': lambda: ("is_in_sub_G2", 1)
 }
 
 

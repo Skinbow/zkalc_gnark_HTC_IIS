@@ -248,6 +248,22 @@ export const operations = {
         <InlineMath math="\mathbb{G}_1^n \mapsto \mathbb{G}_1: (A_1, A_1, \dots, A_n) \mapsto \sum_i A_i" />
       ),
   },
+  is_in_sub_G2: {
+    label: (
+        <>
+          Is in subgroup <InlineMath math="\mathbb{G}_2" />
+        </>
+      ),
+      description: (
+        <>
+          Elliptic curve <InlineMath math="\mathbb{G}_2" /> checking subgroup
+        </>
+      ),
+      tooltip_width: 500,
+      tooltip: (
+        <InlineMath math="\mathbb{G}_1^n \mapsto \mathbb{G}_1: (A_1, A_1, \dots, A_n) \mapsto \sum_i A_i" />
+      ),
+  },
   hash_G1: {
     label: (
         <>
@@ -262,6 +278,22 @@ export const operations = {
       tooltip_width: 500,
       tooltip: (
         <InlineMath math="\mathbb{G}_1^n \mapsto \mathbb{G}_1: (A_1, A_1, \dots, A_n) \mapsto \sum_i A_i" />
+      ),
+  },
+  hash_G2: {
+    label: (
+        <>
+          Hash to <InlineMath math="\mathbb{G}_2" />
+        </>
+      ),
+      description: (
+        <>
+          Elliptic curve <InlineMath math="\mathbb{G}_2" /> hashing
+        </>
+      ),
+      tooltip_width: 500,
+      tooltip: (
+        <InlineMath math="\mathbb{G}_2^n \mapsto \mathbb{G}_2: (A_1, A_1, \dots, A_n) \mapsto \sum_i A_i" />
       ),
   },
   add_G1: {
