@@ -132,7 +132,7 @@ const Home = () => {
                     onClick: () => _setMachine(selectedMachine.key),
                   })
                 }
-                
+
                 return res;
               }, [])
             }}
@@ -151,8 +151,18 @@ const Home = () => {
   };
 
   const ZkalcGraph = () => {
-    let samples = getEstimates(defaultCurve, defaultLib, defaultMachine)[op];
-    if (typeof samples === "undefined") {
+    let allSamples = baseData((x) => x);
+    let samples = undefined;
+    let allUndef = true;
+    for (let i = 0; i < allSamples.length; i++) {
+      if (typeof allSamples[i] !== "undefined") {
+        samples = allSamples[i];
+        allUndef = false;
+        break;
+      }
+    }
+
+    if (allUndef) {
       return <Row align={"center"}>Unavailable</Row>;
     }
     if (samples.range.length > 1) {
@@ -193,9 +203,13 @@ const Home = () => {
           format: formatTimeTick(4),
           tickSize: 5,
           tickRotation: 10,
-          // legend: 'time (ns)',
-          legendOffset: -40,
+          legend: 'time',
+          legendPosition: "top",
+        }}
+        axisBottom={{
+          legend: 'number of input elements',
           legendPosition: "middle",
+          legendOffset: 40,
         }}
       />
     );
