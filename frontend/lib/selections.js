@@ -352,6 +352,28 @@ export const operations = {
       <InlineMath math="\mathbb{G}_2^n \mapsto \mathbb{G}_t: (A_1, A_1, \dots, A_n) \mapsto \sum_i A_i" />
     ),
   },
+  bsm: {
+    label: (
+      <>
+        Batch scalar multiplication
+      </>
+    ),
+    value: "bsm",
+    description: (
+      <>
+        Batch scalar multiplication for <InlineMath math="\mathbb{G}_1" /> elements
+      </>
+    ),
+    tooltip_width: 500,
+    tooltip: (
+      <>
+        Given scalars{" "}
+        <InlineMath math="P_1, P_2, \dots, P_n \in \mathbb{G}_1" /> and points{" "}
+        <InlineMath math="Q_1, Q_2, \dots, Q_n \in \mathbb{G}_2" /> compute{" "}
+        <InlineMath math="\sum_i e(P_i, Q_i)" />
+      </>
+    ),
+  },
 };
 
 export const operations_selection = Object.keys(operations).map((operation) => {
