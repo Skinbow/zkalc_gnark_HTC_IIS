@@ -150,6 +150,7 @@ const estimating_functions = {
   msm_G1: nOverLognEstimation,
   msm_G2: nOverLognEstimation,
   msm_Gt: linearEstimation,
+  bsm: linearEstimation,
   fft: nLognEstimation,
 };
 
